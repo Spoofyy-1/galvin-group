@@ -40,14 +40,13 @@ export function Eyebrow({
   return (
     <span
       className={cn(
-        "eyebrow inline-flex items-center gap-2",
+        "eyebrow",
         tone === "gold" && "text-gold",
         tone === "muted" && "text-muted",
         tone === "cream" && "text-cream/70",
         className
       )}
     >
-      <span className="h-px w-6 bg-current opacity-60" />
       {children}
     </span>
   );

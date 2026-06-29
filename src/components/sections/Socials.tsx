@@ -32,9 +32,9 @@ export function Socials() {
   });
 
   return (
-    <Section surface="navy" className="py-10">
+    <Section surface="navy" className="py-6">
       <div className="flex flex-col items-center">
-        <Eyebrow tone="cream" className="mb-5">
+        <Eyebrow tone="cream" className="mb-3">
           Connect
         </Eyebrow>
         <div className="relative h-16 w-full">

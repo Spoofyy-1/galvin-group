@@ -27,9 +27,9 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-screen w-full overflow-hidden bg-navy text-cream"
+      className="relative w-full overflow-hidden bg-navy text-cream"
     >
-      <div className="relative mx-auto w-full max-w-[1180px] px-5 pb-20 pt-32 sm:px-8 md:pt-40">
+      <div className="relative mx-auto w-full max-w-[1180px] px-5 pb-12 pt-32 sm:px-8 md:pb-16 md:pt-40">
         <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20">
           {/* LEFT — copy */}
           <motion.div variants={container} initial="hidden" animate="visible">
