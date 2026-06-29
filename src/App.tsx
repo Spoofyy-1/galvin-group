@@ -14,7 +14,7 @@ import { Footer } from "@/components/sections/Footer";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-cream text-ink antialiased">
+    <div className="min-h-screen overflow-x-clip bg-cream text-ink antialiased">
       <Nav />
       <main>
         <Hero />
