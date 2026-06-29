@@ -5,19 +5,21 @@
    Pulled from the logo: deep navy mark on warm cream paper.
    ============================================================ */
 @theme {
-  --color-navy: #142a40;
-  --color-navy-deep: #0c1a29;
-  --color-navy-700: #1e3a57;
-  --color-navy-500: #355d82;
-  --color-cream: #f2eee6;
-  --color-cream-card: #fbf9f4;
-  --color-gold: #b68a4e;
-  --color-gold-soft: #d4b483;
-  --color-ink: #16222e;
-  --color-muted: #5c6b79;
+  /* Warm near-black + bone + forest-green — grounded, editorial, not "AI luxury".
+     (Token names kept as navy/cream/gold so the remap cascades everywhere.) */
+  --color-navy: #1c1b16;        /* warm near-black — dark sections & strong elements */
+  --color-navy-deep: #100f0b;   /* deepest black — footer */
+  --color-navy-700: #2c2a23;    /* dark card surface */
+  --color-navy-500: #4a473d;    /* mid */
+  --color-cream: #f1eee6;       /* warm bone — light bg / light text on dark */
+  --color-cream-card: #faf7ef;  /* elevated light card */
+  --color-gold: #4f8a5a;        /* forest green — the single accent */
+  --color-gold-soft: #63a06d;   /* lighter green (hover / on-dark) */
+  --color-ink: #1a1813;         /* warm near-black text */
+  --color-muted: #6e6c61;       /* warm gray */
 
-  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
-  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: "Bricolage Grotesque", "Hanken Grotesk", system-ui, sans-serif;
+  --font-sans: "Hanken Grotesk", ui-sans-serif, system-ui, -apple-system, sans-serif;
 
   --text-eyebrow: 13px;
   --text-eyebrow--line-height: 1.2;
@@ -58,6 +60,7 @@
   .font-display {
     font-family: var(--font-display);
     font-optical-sizing: auto;
+    letter-spacing: -0.025em;
   }
   ::selection {
     background: var(--color-gold);
