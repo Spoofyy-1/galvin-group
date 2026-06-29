@@ -2,7 +2,6 @@ import React from "react";
 import { Nav } from "@/components/sections/Nav";
 import { Hero } from "@/components/sections/Hero";
 import { Socials } from "@/components/sections/Socials";
-import { Stats } from "@/components/sections/Stats";
 import { About } from "@/components/sections/About";
 import { Pillars } from "@/components/sections/Pillars";
 import { BuyBox } from "@/components/sections/BuyBox";
@@ -19,7 +18,6 @@ export default function App() {
       <main>
         <Hero />
         <Socials />
-        <Stats />
         <About />
         <Pillars />
         <BuyBox />
