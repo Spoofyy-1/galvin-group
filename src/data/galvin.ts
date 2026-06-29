@@ -45,7 +45,6 @@ export const CONTACT = {
 /* Headline stats — anchored to the active raise + buy-box. */
 export const STATS = [
   { value: 19, suffix: "", label: "Doors under contract", sub: "Panama City portfolio" },
-  { value: 14, suffix: "", label: "Properties acquiring", sub: "SFR · duplex · triplex · land" },
   { value: 375, prefix: "$", suffix: "K", label: "Club raise", sub: "Southeast residential fund" },
   { value: 2, suffix: "×", label: "Target equity multiple", sub: "~5-year hold" },
 ];

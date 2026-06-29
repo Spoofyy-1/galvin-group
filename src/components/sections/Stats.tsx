@@ -48,18 +48,11 @@ function StatNumber({
 export function Stats() {
   return (
     <Section surface="card" className="py-16 md:py-20">
-      <div className="grid grid-cols-2 md:grid-cols-4">
-        {STATS.map((s, i) => (
+      <div className="grid grid-cols-1 sm:grid-cols-3">
+        {STATS.map((s) => (
           <div
             key={s.label}
-            className={[
-              "px-5 py-6 md:px-8",
-              // hairline dividers between cells
-              i % 2 !== 0 ? "border-l border-navy/10" : "",
-              "md:border-l md:border-navy/10",
-              i % 4 === 0 ? "md:border-l-0" : "",
-              i < 2 ? "" : "border-t border-navy/10 md:border-t-0",
-            ].join(" ")}
+            className="border-t border-navy/10 px-5 py-6 first:border-t-0 sm:border-l sm:border-t-0 sm:px-8 sm:first:border-l-0"
           >
             <StatNumber value={s.value} prefix={s.prefix} suffix={s.suffix} />
             <p className="mt-3 font-medium text-ink">{s.label}</p>
