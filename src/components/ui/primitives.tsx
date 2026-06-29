@@ -68,15 +68,18 @@ export function Button({
   external?: boolean;
   className?: string;
 }) {
+  // Squared, structured buttons read institutional/trustworthy — not the
+  // consumer-app "pill" look. Crisp 2px radius, confident weight, restrained
+  // hover (color shift + subtle press), no bouncy scale.
   const base =
-    "group inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-[15px] font-semibold transition-all duration-200 ease-out active:scale-[0.98]";
+    "group inline-flex items-center justify-center gap-2 rounded-[3px] px-7 py-[15px] text-[13.5px] font-semibold uppercase tracking-[0.07em] transition-colors duration-200 ease-out active:translate-y-px";
   const tones: Record<string, string> = {
     solid: "bg-navy text-cream hover:bg-navy-deep",
-    gold: "bg-gold text-cream hover:bg-gold-soft",
+    gold: "bg-gold text-cream hover:bg-[#9c4f29]",
     outline:
-      "border border-navy/25 text-navy hover:bg-navy hover:text-cream hover:border-navy",
+      "border border-navy/30 text-navy hover:bg-navy hover:text-cream hover:border-navy",
     "outline-cream":
-      "border border-cream/30 text-cream hover:bg-cream hover:text-navy-deep",
+      "border border-cream/35 text-cream hover:bg-cream hover:text-navy",
   };
   const cls = cn(base, tones[variant], className);
   return href ? (

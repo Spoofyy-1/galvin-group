@@ -25,7 +25,7 @@ export function Media() {
       />
 
       {/* Tabs */}
-      <div className="mt-9 inline-flex rounded-full border border-navy/12 bg-cream-card p-1">
+      <div className="mt-9 inline-flex rounded-[4px] border border-navy/12 bg-cream-card p-1">
         {TABS.map((t) => {
           const Icon = t.icon;
           const active = tab === t.id;
@@ -33,12 +33,12 @@ export function Media() {
             <button
               key={t.id}
               onClick={() => setTab(t.id)}
-              className="relative flex items-center gap-2 rounded-full px-5 py-2.5 text-[14px] font-semibold transition-colors"
+              className="relative flex items-center gap-2 rounded-[2px] px-5 py-2.5 text-[13px] font-semibold uppercase tracking-[0.05em] transition-colors"
             >
               {active && (
                 <motion.span
                   layoutId="media-tab"
-                  className="absolute inset-0 rounded-full bg-navy"
+                  className="absolute inset-0 rounded-[2px] bg-navy"
                   transition={{ type: "spring", stiffness: 420, damping: 34 }}
                 />
               )}
