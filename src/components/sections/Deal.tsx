@@ -4,7 +4,7 @@ import { MapPin } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
 import { Section, SectionHead, Button } from "@/components/ui/primitives";
 import { Reveal } from "@/components/ui/reveal";
-import { DEAL, fmtUSD } from "@/data/galvin";
+import { DEAL, CONTACT, fmtUSD } from "@/data/galvin";
 
 export function Deal() {
   const reduce = useReducedMotion();
@@ -74,7 +74,7 @@ export function Deal() {
             <p className="mt-5 text-[12px] text-cream/45">{DEAL.note}</p>
 
             <div className="mt-7">
-              <Button variant="gold" href="#contact">
+              <Button variant="gold" href={CONTACT.fractional} external>
                 Get the full underwriting
               </Button>
             </div>
