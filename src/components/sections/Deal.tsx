@@ -4,7 +4,7 @@ import { MapPin } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
 import { Section, SectionHead, Button } from "@/components/ui/primitives";
 import { Reveal } from "@/components/ui/reveal";
-import { DEAL, IMAGES, fmtUSD } from "@/data/galvin";
+import { DEAL, fmtUSD } from "@/data/galvin";
 
 export function Deal() {
   const reduce = useReducedMotion();
@@ -20,13 +20,23 @@ export function Deal() {
 
       <Reveal className="mt-12 md:mt-14">
         <div className="grid grid-cols-1 overflow-hidden rounded-3xl border border-cream/15 bg-navy-700/40 lg:grid-cols-2">
-          {/* LEFT — image */}
-          <div className="relative min-h-[280px] lg:min-h-full">
-            <img
-              src={IMAGES.brickRow}
-              alt={DEAL.name}
-              className="absolute inset-0 h-full w-full object-cover"
-            />
+          {/* LEFT — branded portfolio panel (no stock imagery) */}
+          <div className="relative flex min-h-[300px] flex-col justify-between bg-gradient-to-br from-navy-700 to-navy-deep p-8 lg:min-h-full lg:p-10">
+            <div className="eyebrow text-gold">The Portfolio</div>
+            <div>
+              <div className="flex items-end gap-3">
+                <span className="font-display text-[76px] leading-none text-cream">
+                  {DEAL.doors}
+                </span>
+                <span className="mb-2 text-cream/70">doors</span>
+              </div>
+              <div className="mt-2 text-cream/70">
+                across {DEAL.properties} properties in {DEAL.location}
+              </div>
+              <div className="mt-5 inline-flex items-center gap-2 rounded-full border border-cream/20 px-3 py-1 text-[13px] text-cream/70">
+                <MapPin className="h-3.5 w-3.5 text-gold" /> Gulf Coast · workforce &amp; tourism housing
+              </div>
+            </div>
           </div>
 
           {/* RIGHT — content */}
@@ -36,27 +46,8 @@ export function Deal() {
               <span className="text-[15px]">{DEAL.location}</span>
             </div>
 
-            {/* stats */}
-            <div className="mt-7 grid grid-cols-2 gap-6">
-              <div>
-                <div className="font-display text-[44px] leading-none text-gold">
-                  {DEAL.properties}
-                </div>
-                <div className="mt-2 text-[13px] uppercase tracking-wide text-cream/60">
-                  Properties
-                </div>
-              </div>
-              <div>
-                <div className="font-display text-[44px] leading-none text-cream">
-                  {DEAL.doors}
-                </div>
-                <div className="mt-2 text-[13px] uppercase tracking-wide text-cream/60">
-                  Doors
-                </div>
-              </div>
-            </div>
-
-            <p className="mt-6 text-cream/75">{DEAL.mix}</p>
+            <div className="eyebrow mt-7 text-cream/50">Asset mix</div>
+            <p className="mt-3 text-lead text-cream/85">{DEAL.mix}</p>
 
             {/* funding bar */}
             <div className="mt-8">

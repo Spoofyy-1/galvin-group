@@ -2,7 +2,7 @@
 import { MapPin } from "lucide-react";
 import { motion, useReducedMotion, type Variants } from "motion/react";
 import { Button, Eyebrow } from "@/components/ui/primitives";
-import { PERSON, CREDS, IMAGES } from "@/data/galvin";
+import { PERSON, CREDS, BRAND } from "@/data/galvin";
 
 export function Hero() {
   const reduce = useReducedMotion();
@@ -96,29 +96,41 @@ export function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* RIGHT — property image */}
+          {/* RIGHT — Cooper profile card (real photo, builds investor trust) */}
           <motion.div
             initial={reduce ? { opacity: 0 } : { opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1], delay: 0.25 }}
-            className="relative"
+            className="relative mx-auto w-full max-w-sm"
           >
-            <div className="relative overflow-hidden rounded-3xl ring-1 ring-gold/40">
-              <img
-                src={IMAGES.heroProperty}
-                alt="Galvin Group investment property"
-                className="aspect-[4/5] w-full object-cover sm:aspect-[5/4] lg:aspect-[4/5]"
-                loading="eager"
-              />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy-deep/40 to-transparent" />
-            </div>
-
-            {/* Floating stat card */}
-            <div className="absolute -bottom-5 -left-4 max-w-[230px] rounded-xl bg-cream-card px-4 py-3 text-ink shadow-xl sm:-left-6">
-              <p className="text-[15px] font-semibold leading-snug">
-                19 doors under contract
-              </p>
-              <p className="mt-0.5 text-[13px] text-muted">Bay County, FL</p>
+            <div className="rounded-3xl border border-cream/15 bg-gradient-to-b from-navy-700/70 to-navy-deep/50 p-8 ring-1 ring-gold/30">
+              <div className="flex flex-col items-center text-center">
+                <div className="h-32 w-32 overflow-hidden rounded-full ring-2 ring-gold/60">
+                  <img
+                    src={BRAND.headshot}
+                    alt="Cooper Galvin, founder of Galvin Group"
+                    className="h-full w-full object-cover"
+                    loading="eager"
+                  />
+                </div>
+                <h2 className="mt-5 font-display text-h3 text-cream">Cooper Galvin</h2>
+                <p className="mt-1.5 px-2 text-[13.5px] leading-snug text-gold">
+                  {PERSON.title}
+                </p>
+                <p className="mt-2.5 flex items-center gap-1.5 text-[13px] text-cream/60">
+                  <MapPin className="h-3.5 w-3.5 text-gold" /> Orlando, FL
+                </p>
+              </div>
+              <div className="mt-6 grid grid-cols-2 gap-4 border-t border-cream/12 pt-6 text-center">
+                <div>
+                  <p className="font-display text-[30px] leading-none text-gold">19</p>
+                  <p className="mt-1.5 text-[12px] text-cream/55">doors under contract</p>
+                </div>
+                <div>
+                  <p className="font-display text-[30px] leading-none text-cream">14</p>
+                  <p className="mt-1.5 text-[12px] text-cream/55">properties · Bay County</p>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>

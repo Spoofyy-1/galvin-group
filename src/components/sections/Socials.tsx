@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Instagram, Linkedin, Mail, Phone } from "lucide-react";
+import { Instagram, Linkedin, Mail, Phone, Youtube, Twitter, TrendingUp } from "lucide-react";
 import { Section, Eyebrow } from "@/components/ui/primitives";
 import LogoLoop, { type LogoItem } from "@/components/ui/LogoLoop";
 import { SOCIALS } from "@/data/galvin";
@@ -8,6 +8,9 @@ import { SOCIALS } from "@/data/galvin";
 const ICONS = {
   instagram: Instagram,
   linkedin: Linkedin,
+  youtube: Youtube,
+  x: Twitter,
+  fractional: TrendingUp,
   mail: Mail,
   phone: Phone,
 } as const;

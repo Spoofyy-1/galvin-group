@@ -21,22 +21,25 @@ export const BRAND = {
 export const PERSON = {
   name: "Cooper Galvin",
   partner: "Michael Galvin",
-  title: "Real Estate Investor & Operator",
+  title: "Owner & Investor — Multifamily, Self-Storage & Buy-and-Hold",
   location: "Orlando, FL",
-  market: "Investing across the Southeast — Florida & the Gulf Coast",
+  market: "Based in Orlando — investing across the Southeast & red-state markets",
   mission:
     "Documenting relentless improvement — building financial freedom through cash-flowing real estate.",
   bio: "Cooper Galvin is a real-estate investor and operator focused on acquiring and operating cash-flowing assets. A Sergeant in the Army National Guard and a Norwich University construction-management graduate and student-athlete, he brings military discipline and hands-on construction expertise to every deal. Alongside Michael Galvin, he runs the Galvin Group Investment Club, helping investors build equity in a diversified portfolio of Southeastern real estate.",
 };
 
 export const CONTACT = {
-  phone: "(407) 832-0231",
-  phoneHref: "tel:+14078320231",
-  email: "galvininvests@gmail.com",
-  emailHref: "mailto:galvininvests@gmail.com",
+  phone: "(312) 208-1032",
+  phoneHref: "tel:+13122081032",
+  email: "galvinc30@gmail.com",
+  emailHref: "mailto:galvinc30@gmail.com",
   instagram: "https://www.instagram.com/galvingroup_/",
   instagramHandle: "@galvingroup_",
-  linkedin: "https://www.linkedin.com/in/sgt-cooper-galvin-cm/",
+  linkedin: "https://www.linkedin.com/in/sgt-cooper-galvin-cm",
+  youtube: "https://youtu.be/daytJ7OUv6U",
+  x: "https://x.com/gooper_c",
+  fractional: "https://www.fractional.app/p/galvingroupclub",
 };
 
 /* Headline stats — anchored to the active raise + buy-box. */
@@ -160,6 +163,9 @@ export const DEAL = {
 export const SOCIALS = [
   { name: "Instagram", icon: "instagram", href: CONTACT.instagram, label: CONTACT.instagramHandle },
   { name: "LinkedIn", icon: "linkedin", href: CONTACT.linkedin, label: "Cooper Galvin" },
+  { name: "YouTube", icon: "youtube", href: CONTACT.youtube, label: "Galvin Group" },
+  { name: "X", icon: "x", href: CONTACT.x, label: "@gooper_c" },
+  { name: "Invest via Fractional", icon: "fractional", href: CONTACT.fractional, label: "Galvin Group Club" },
   { name: "Email", icon: "mail", href: CONTACT.emailHref, label: CONTACT.email },
   { name: "Call", icon: "phone", href: CONTACT.phoneHref, label: CONTACT.phone },
 ];
