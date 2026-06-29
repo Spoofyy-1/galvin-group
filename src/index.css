@@ -7,16 +7,18 @@
 @theme {
   /* Warm near-black + bone + forest-green — grounded, editorial, not "AI luxury".
      (Token names kept as navy/cream/gold so the remap cascades everywhere.) */
-  --color-navy: #232019;        /* warm charcoal — dark sections & strong elements */
-  --color-navy-deep: #17140e;   /* deepest — footer */
-  --color-navy-700: #322e26;    /* dark card surface */
-  --color-navy-500: #524d42;    /* mid */
-  --color-cream: #f3f0e8;       /* warm off-white — light bg / light text on dark */
-  --color-cream-card: #fbf9f2;  /* elevated light card */
-  --color-gold: #b45e33;        /* muted clay / rust — the single accent */
-  --color-gold-soft: #c9835a;   /* lighter clay (hover / on-dark) */
-  --color-ink: #221f19;         /* warm charcoal text */
-  --color-muted: #74706a;       /* warm gray */
+  /* Galvin Group brand palette (from the deck): deep navy + warm cream +
+     antique gold. Matches the logo. */
+  --color-navy: #16294a;        /* brand navy — dark sections & strong elements */
+  --color-navy-deep: #0f1d36;   /* deepest — footer */
+  --color-navy-700: #26385a;    /* dark card surface */
+  --color-navy-500: #44557c;    /* mid */
+  --color-cream: #ece9e2;       /* warm cream — light bg / light text on dark */
+  --color-cream-card: #f5f3ed;  /* elevated light card */
+  --color-gold: #bb9a55;        /* antique brand gold — the accent */
+  --color-gold-soft: #d3ba82;   /* lighter gold (hover / on-dark) */
+  --color-ink: #18243d;         /* deep navy text */
+  --color-muted: #69718a;       /* muted slate */
 
   --font-display: "Bricolage Grotesque", "Hanken Grotesk", system-ui, sans-serif;
   --font-sans: "Hanken Grotesk", ui-sans-serif, system-ui, -apple-system, sans-serif;

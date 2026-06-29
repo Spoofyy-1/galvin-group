@@ -217,8 +217,9 @@ export const SOCIALS = [
   { name: "YouTube", icon: "youtube", href: CONTACT.youtube, label: "Galvin Group" },
   { name: "X", icon: "x", href: CONTACT.x, label: "@gooper_c" },
   { name: "Invest via Fractional", icon: "fractional", href: CONTACT.fractional, label: "Galvin Group Club" },
-  { name: "Email", icon: "mail", href: CONTACT.emailHref, label: CONTACT.email },
-  { name: "Call", icon: "phone", href: CONTACT.phoneHref, label: CONTACT.phone },
+  // zero-width spaces break phone/email auto-detection (the "blue" highlight)
+  { name: "Email", icon: "mail", href: CONTACT.emailHref, label: "galvinc30​@​gmail.com" },
+  { name: "Call", icon: "phone", href: CONTACT.phoneHref, label: "(312)​ 208​-1032" },
 ];
 
 /* Communities / affiliations — "Backed by", clickable where a site exists. */

@@ -73,7 +73,7 @@ export function Button({
     "group inline-flex items-center justify-center gap-2 rounded-[6px] px-6 py-3.5 text-[15px] font-semibold transition-colors duration-200 ease-out";
   const tones: Record<string, string> = {
     solid: "bg-navy text-cream hover:bg-navy-deep",
-    gold: "bg-gold text-cream hover:bg-[#9c4f29]",
+    gold: "bg-gold text-navy-deep hover:bg-[#a3863f]",
     outline:
       "border border-navy/25 text-navy hover:bg-navy hover:text-cream hover:border-navy",
     "outline-cream":
