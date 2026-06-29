@@ -1,20 +1,22 @@
 "use client";
-import { MapPin } from "lucide-react";
+import React, { useState } from "react";
+import { MapPin, ArrowRight } from "lucide-react";
 import { motion, useReducedMotion, type Variants } from "motion/react";
 import { Button, Eyebrow } from "@/components/ui/primitives";
-import { PERSON, CREDS, BRAND } from "@/data/galvin";
+import { PERSON, BRAND } from "@/data/galvin";
 
 export function Hero() {
   const reduce = useReducedMotion();
+  const [imgOk, setImgOk] = useState(true);
 
   const container: Variants = {
     hidden: {},
     visible: {
-      transition: { staggerChildren: reduce ? 0 : 0.12, delayChildren: 0.1 },
+      transition: { staggerChildren: reduce ? 0 : 0.1, delayChildren: 0.08 },
     },
   };
   const item: Variants = {
-    hidden: reduce ? { opacity: 0 } : { opacity: 0, y: 22 },
+    hidden: reduce ? { opacity: 0 } : { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
@@ -25,23 +27,12 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="paper relative min-h-screen w-full overflow-hidden bg-navy text-cream"
+      className="relative min-h-screen w-full overflow-hidden bg-navy text-cream"
     >
-      {/* Soft gold radial glow */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -right-32 -top-24 h-[520px] w-[520px] rounded-full bg-gold/10 blur-[120px]"
-      />
-
-      <div className="relative mx-auto w-full max-w-[1180px] px-5 pb-20 pt-32 sm:px-8 md:pt-36 lg:pb-28 lg:pt-40">
-        <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+      <div className="relative mx-auto w-full max-w-[1180px] px-5 pb-20 pt-32 sm:px-8 md:pt-40">
+        <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20">
           {/* LEFT — copy */}
-          <motion.div
-            variants={container}
-            initial="hidden"
-            animate="visible"
-            className="max-w-xl"
-          >
+          <motion.div variants={container} initial="hidden" animate="visible">
             <motion.div variants={item}>
               <Eyebrow tone="gold">Galvin Group — Real Estate Investment</Eyebrow>
             </motion.div>
@@ -50,15 +41,17 @@ export function Hero() {
               variants={item}
               className="mt-6 font-display text-h1 font-medium md:text-display"
             >
-              Cash flow, built with discipline.
+              Cash flow, built
+              <br />
+              with discipline.
             </motion.h1>
 
             <motion.p
               variants={item}
               className="mt-6 max-w-md text-lead text-cream/75"
             >
-              {PERSON.market}. Building financial freedom through cash-flowing
-              real estate — relentless, disciplined, and built to compound.
+              {PERSON.market}. We acquire and operate cash-flowing real estate —
+              relentless, disciplined, and built to compound.
             </motion.p>
 
             <motion.div
@@ -67,6 +60,7 @@ export function Hero() {
             >
               <Button variant="gold" href="#club">
                 Join the investment club
+                <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
               </Button>
               <Button variant="outline-cream" href="#strategy">
                 See the buy box
@@ -75,63 +69,52 @@ export function Hero() {
 
             <motion.div
               variants={item}
-              className="mt-9 flex flex-wrap gap-2"
+              className="mt-10 border-t border-cream/12 pt-6"
             >
-              {CREDS.map((c) => (
-                <span
-                  key={c}
-                  className="rounded-[2px] border border-cream/20 px-3 py-1.5 text-[12px] uppercase tracking-[0.04em] text-cream/60"
-                >
-                  {c}
-                </span>
-              ))}
-            </motion.div>
-
-            <motion.div
-              variants={item}
-              className="mt-7 flex items-center gap-2 text-sm text-cream/60"
-            >
-              <MapPin className="h-4 w-4 text-gold" />
-              <span>Orlando, FL · investing across the Southeast</span>
+              <p className="text-[13px] uppercase tracking-[0.06em] text-cream/45">
+                Army National Guard&nbsp;&middot;&nbsp; Norwich University&nbsp;&middot;&nbsp;
+                Creative Finance
+              </p>
             </motion.div>
           </motion.div>
 
-          {/* RIGHT — Cooper profile card (real photo, builds investor trust) */}
+          {/* RIGHT — editorial portrait + caption */}
           <motion.div
-            initial={reduce ? { opacity: 0 } : { opacity: 0, y: 28 }}
+            initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1], delay: 0.25 }}
-            className="relative mx-auto w-full max-w-sm"
+            transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1], delay: 0.2 }}
+            className="mx-auto w-full max-w-[360px] lg:ml-auto"
           >
-            <div className="rounded-3xl border border-cream/15 bg-gradient-to-b from-navy-700/70 to-navy-deep/50 p-8 ring-1 ring-gold/30">
-              <div className="flex flex-col items-center text-center">
-                <div className="h-32 w-32 overflow-hidden rounded-full ring-2 ring-gold/60">
+            <figure>
+              <div className="overflow-hidden rounded-[10px] border border-cream/15 bg-navy-700">
+                {imgOk ? (
                   <img
                     src={BRAND.headshot}
                     alt="Cooper Galvin, founder of Galvin Group"
-                    className="h-full w-full object-cover"
+                    className="aspect-[4/5] w-full object-cover object-center"
                     loading="eager"
+                    onError={() => setImgOk(false)}
                   />
-                </div>
-                <h2 className="mt-5 font-display text-h3 text-cream">Cooper Galvin</h2>
-                <p className="mt-1.5 px-2 text-[13.5px] leading-snug text-gold">
-                  {PERSON.title}
-                </p>
-                <p className="mt-2.5 flex items-center gap-1.5 text-[13px] text-cream/60">
-                  <MapPin className="h-3.5 w-3.5 text-gold" /> Orlando, FL
-                </p>
+                ) : (
+                  <div className="flex aspect-[4/5] w-full items-center justify-center font-display text-[64px] text-cream/70">
+                    CG
+                  </div>
+                )}
               </div>
-              <div className="mt-6 grid grid-cols-2 gap-4 border-t border-cream/12 pt-6 text-center">
+              <figcaption className="mt-4 flex items-end justify-between gap-4 border-b border-cream/12 pb-4">
                 <div>
-                  <p className="font-display text-[30px] leading-none text-gold">19</p>
-                  <p className="mt-1.5 text-[12px] text-cream/55">doors under contract</p>
+                  <p className="font-display text-[21px] text-cream">
+                    Cooper Galvin
+                  </p>
+                  <p className="mt-0.5 text-[13.5px] text-gold">
+                    Owner &amp; Investor · Galvin Group
+                  </p>
                 </div>
-                <div>
-                  <p className="font-display text-[30px] leading-none text-cream">14</p>
-                  <p className="mt-1.5 text-[12px] text-cream/55">properties · Bay County</p>
-                </div>
-              </div>
-            </div>
+                <p className="flex shrink-0 items-center gap-1.5 text-[13px] text-cream/55">
+                  <MapPin className="h-3.5 w-3.5" /> Orlando, FL
+                </p>
+              </figcaption>
+            </figure>
           </motion.div>
         </div>
       </div>

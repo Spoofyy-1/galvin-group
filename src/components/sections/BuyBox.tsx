@@ -27,7 +27,7 @@ export function BuyBox() {
           const Icon = ICONS[b.icon] ?? Building2;
           return (
             <RevealItem key={b.type}>
-              <div className="group h-full rounded-3xl border border-cream/15 bg-navy-700/40 p-7 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-cream/25 hover:shadow-[0_24px_60px_-30px_rgba(0,0,0,0.55)]">
+              <div className="group h-full rounded-xl border border-cream/15 bg-navy-700/40 p-7 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-cream/25 hover:shadow-[0_24px_60px_-30px_rgba(0,0,0,0.55)]">
                 <div className="flex items-center gap-4">
                   <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-gold/30 bg-gold/10 text-gold">
                     <Icon className="h-5 w-5" strokeWidth={1.75} />

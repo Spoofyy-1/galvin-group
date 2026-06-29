@@ -112,7 +112,7 @@ export function Contact() {
 
         {/* RIGHT — contact form card */}
         <Reveal delay={0.08}>
-          <div className="rounded-3xl border border-cream/10 bg-cream-card p-7 text-ink">
+          <div className="rounded-xl border border-cream/10 bg-cream-card p-7 text-ink">
             {sent ? (
               <div className="flex min-h-[420px] flex-col items-center justify-center text-center">
                 <span className="flex h-14 w-14 items-center justify-center rounded-full bg-gold/15 text-gold">

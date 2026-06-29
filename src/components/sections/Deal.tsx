@@ -19,7 +19,7 @@ export function Deal() {
       />
 
       <Reveal className="mt-12 md:mt-14">
-        <div className="grid grid-cols-1 overflow-hidden rounded-3xl border border-cream/15 bg-navy-700/40 lg:grid-cols-2">
+        <div className="grid grid-cols-1 overflow-hidden rounded-xl border border-cream/15 bg-navy-700/40 lg:grid-cols-2">
           {/* LEFT — branded portfolio panel (no stock imagery) */}
           <div className="relative flex min-h-[300px] flex-col justify-between bg-gradient-to-br from-navy-700 to-navy-deep p-8 lg:min-h-full lg:p-10">
             <div className="eyebrow text-gold">The Portfolio</div>

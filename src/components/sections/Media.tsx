@@ -67,7 +67,7 @@ export function Media() {
           {tab === "instagram" ? (
             <div className="grid items-center gap-10 md:grid-cols-[auto_1fr] md:gap-14">
               {MEDIA.reelId ? (
-                <div className="mx-auto w-[300px] overflow-hidden rounded-3xl border border-navy/10 bg-white">
+                <div className="mx-auto w-[300px] overflow-hidden rounded-xl border border-navy/10 bg-white">
                   <iframe
                     title="Latest Instagram reel"
                     src={`https://www.instagram.com/reel/${MEDIA.reelId}/embed`}
@@ -81,7 +81,7 @@ export function Media() {
                   href={MEDIA.instagramReels}
                   target="_blank"
                   rel="noreferrer"
-                  className="group relative mx-auto block aspect-[9/16] w-[280px] overflow-hidden rounded-3xl bg-navy ring-1 ring-navy/10"
+                  className="group relative mx-auto block aspect-[9/16] w-[280px] overflow-hidden rounded-xl bg-navy ring-1 ring-navy/10"
                 >
                   <img
                     src={BRAND.headshot}
@@ -131,7 +131,7 @@ export function Media() {
             </div>
           ) : (
             <div>
-              <div className="overflow-hidden rounded-3xl border border-navy/10 bg-navy shadow-sm">
+              <div className="overflow-hidden rounded-xl border border-navy/10 bg-navy shadow-sm">
                 <div className="relative aspect-video w-full">
                   <iframe
                     className="absolute inset-0 h-full w-full"
