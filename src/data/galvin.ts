@@ -57,6 +57,57 @@ export const CREDS = [
   "Creative-Finance Operator",
 ];
 
+/* LinkedIn-style experience timeline (most recent first). */
+export const EXPERIENCE: {
+  role: string;
+  org: string;
+  meta: string;
+  period: string;
+  desc: string;
+  icon: "logo" | "club" | "military" | "education" | "community";
+}[] = [
+  {
+    role: "Owner & Investor",
+    org: "Galvin Group",
+    meta: "Orlando, FL",
+    period: "Present",
+    desc: "Acquiring and operating cash-flowing multifamily, self-storage, and buy-and-hold residential across the Southeast.",
+    icon: "logo",
+  },
+  {
+    role: "Co-Founder",
+    org: "Galvin Group Investment Club",
+    meta: "with Michael Galvin",
+    period: "Present",
+    desc: "A members-only club pooling capital into cash-flowing Southeastern real estate, administered via Fractional.",
+    icon: "club",
+  },
+  {
+    role: "Sergeant",
+    org: "U.S. Army National Guard",
+    meta: "Non-Commissioned Officer",
+    period: "Service",
+    desc: "Leadership, discipline, and accountability under pressure — the operating system behind every deal.",
+    icon: "military",
+  },
+  {
+    role: "B.S., Construction Management",
+    org: "Norwich University",
+    meta: "Student-Athlete",
+    period: "Degree",
+    desc: "Hands-on construction and project-management expertise, applied directly to renovation scopes and budgets.",
+    icon: "education",
+  },
+  {
+    role: "Creative-Finance Operator",
+    org: "SubTo · Owners Club",
+    meta: "Community & education",
+    period: "Member",
+    desc: "Active in the country's leading creative-finance communities for sourcing and structuring deals.",
+    icon: "community",
+  },
+];
+
 /* Three pillars — the edge. */
 export const PILLARS = [
   {

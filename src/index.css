@@ -7,16 +7,16 @@
 @theme {
   /* Warm near-black + bone + forest-green — grounded, editorial, not "AI luxury".
      (Token names kept as navy/cream/gold so the remap cascades everywhere.) */
-  --color-navy: #1c1b16;        /* warm near-black — dark sections & strong elements */
-  --color-navy-deep: #100f0b;   /* deepest black — footer */
-  --color-navy-700: #2c2a23;    /* dark card surface */
-  --color-navy-500: #4a473d;    /* mid */
-  --color-cream: #f1eee6;       /* warm bone — light bg / light text on dark */
-  --color-cream-card: #faf7ef;  /* elevated light card */
-  --color-gold: #4f8a5a;        /* forest green — the single accent */
-  --color-gold-soft: #63a06d;   /* lighter green (hover / on-dark) */
-  --color-ink: #1a1813;         /* warm near-black text */
-  --color-muted: #6e6c61;       /* warm gray */
+  --color-navy: #232019;        /* warm charcoal — dark sections & strong elements */
+  --color-navy-deep: #17140e;   /* deepest — footer */
+  --color-navy-700: #322e26;    /* dark card surface */
+  --color-navy-500: #524d42;    /* mid */
+  --color-cream: #f3f0e8;       /* warm off-white — light bg / light text on dark */
+  --color-cream-card: #fbf9f2;  /* elevated light card */
+  --color-gold: #b45e33;        /* muted clay / rust — the single accent */
+  --color-gold-soft: #c9835a;   /* lighter clay (hover / on-dark) */
+  --color-ink: #221f19;         /* warm charcoal text */
+  --color-muted: #74706a;       /* warm gray */
 
   --font-display: "Bricolage Grotesque", "Hanken Grotesk", system-ui, sans-serif;
   --font-sans: "Hanken Grotesk", ui-sans-serif, system-ui, -apple-system, sans-serif;
