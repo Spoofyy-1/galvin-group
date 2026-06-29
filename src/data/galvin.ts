@@ -170,15 +170,27 @@ export const SOCIALS = [
   { name: "Call", icon: "phone", href: CONTACT.phoneHref, label: CONTACT.phone },
 ];
 
-/* Communities / affiliations — used in the wordmark LogoLoop. */
-export const AFFILIATIONS = [
-  "SUBTO",
-  "Owners Club",
-  "Norwich University",
-  "Army National Guard",
-  "Fractional",
-  "Creative Finance",
+/* Communities / affiliations — "Backed by", clickable where a site exists. */
+export const AFFILIATIONS: { name: string; href?: string }[] = [
+  { name: "SubTo", href: "https://subto.com" },
+  { name: "Owners Club" },
+  { name: "Fractional", href: "https://www.fractional.app/p/galvingroupclub" },
+  { name: "Norwich University", href: "https://www.norwich.edu" },
+  { name: "Army National Guard", href: "https://www.nationalguard.com" },
+  { name: "Creative Finance" },
 ];
+
+/* Media — YouTube video + Instagram reels for the tabbed "Watch" section.
+   To embed a specific reel live, set `reelId` to a reel shortcode
+   (instagram.com/reel/<id>/) and the Instagram tab will iframe it. */
+export const MEDIA = {
+  youtubeId: "daytJ7OUv6U",
+  youtubeUrl: CONTACT.youtube,
+  instagram: CONTACT.instagram,
+  instagramReels: "https://www.instagram.com/galvingroup_/reels/",
+  instagramHandle: CONTACT.instagramHandle,
+  reelId: "" as string, // e.g. "C8xVZ..." → live-embeds that reel
+};
 
 export const IMAGES = {
   heroProperty: img("photo-1512917774080-9991f1c4c750", 1700),

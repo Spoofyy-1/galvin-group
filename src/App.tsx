@@ -8,6 +8,7 @@ import { Pillars } from "@/components/sections/Pillars";
 import { BuyBox } from "@/components/sections/BuyBox";
 import { Club } from "@/components/sections/Club";
 import { Deal } from "@/components/sections/Deal";
+import { Media } from "@/components/sections/Media";
 import { Affiliations } from "@/components/sections/Affiliations";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/sections/Footer";
@@ -25,6 +26,7 @@ export default function App() {
         <BuyBox />
         <Club />
         <Deal />
+        <Media />
         <Affiliations />
         <Contact />
       </main>

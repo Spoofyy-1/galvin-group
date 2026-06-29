@@ -58,12 +58,14 @@ export function Button({
   href,
   onClick,
   variant = "solid",
+  external,
   className,
 }: {
   children: React.ReactNode;
   href?: string;
   onClick?: () => void;
   variant?: "solid" | "gold" | "outline" | "outline-cream";
+  external?: boolean;
   className?: string;
 }) {
   const base =
@@ -78,7 +80,12 @@ export function Button({
   };
   const cls = cn(base, tones[variant], className);
   return href ? (
-    <a href={href} onClick={onClick} className={cls}>
+    <a
+      href={href}
+      onClick={onClick}
+      className={cls}
+      {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
+    >
       {children}
     </a>
   ) : (
